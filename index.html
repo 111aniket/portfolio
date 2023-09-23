@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2dafc38bc7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.webp" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer/ Programmer</p>
+                <h1>Hello, I'm <span>Aniket</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="my.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>To start my career as a technical person in software field by using my technical knowledge and skills in learning environment for the better growth of the organization</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C/C++</span><br></li>
+                            <li><span>HTML,CSS</span><br></li>
+                            <li><span>MS Office</span><br></li>
+                            <li><span>SQL</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Graduation(2021-24)</span><br>Bachelor Of Computer Application(BCA) from MLN College -- 74%</li>
+                            <li><span>Senior Secondary School(2020-21)</span><br>MLN Sen Sec School -- 90%</li>
+                            <li><span>Matriculation(2018-19)</span><br>Shree Krishan High School -- 82%</li>
+                         
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ---------------project---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Project</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Profile Website</h2>
+                <p>This is my Portfolio Project. This project aims to showcase my skills and projects.</p>
+                <a href="#header">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- --------------contact------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-regular fa-envelope"></i> anikashyap3805@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 9817775872</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/aniket._.111_?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/aniket.kashyap.18294?mibextid=LQQJ4d"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="My resume2.pdf" download class="btn btn2">Download Resume</a>
+        </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <P>Copyright @ Aniket <i class="fa-solid fa-skull-crossbones"></i>.</P>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");    
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+   
+
+</body>
+</html>
